@@ -1,0 +1,16 @@
+DROP SCHEMA IF EXISTS DAT109BilUtleie CASCADE;
+CREATE SCHEMA DAT109BilUtleie;
+
+CREATE TABLE DAT109BilUtleie.Kontor (Kontornr int PRIMARY KEY,  Adresse varchar, Telefonnummer int);
+CREATE TABLE DAT109BilUtleie.Bil (RegNr varchar PRIMARY KEY, Merke varchar, Modell varchar, Farge varchar, Gruppe varchar, Ledig boolean);
+CREATE TABLE DAT109BilUtleie.Kunde (Fornavn varchar, Etternavn varchar, adresse varchar, telefonnummer int PRIMARY KEY);
+
+
+INSERT INTO DAT109BilUtleie.Kontor VALUES
+        (0001, 'Gateveien 4', 12345678),(0002, 'Veigaten 3', 23456781);
+
+INSERT INTO DAT109BilUtleie.Bil VALUES
+        ('AB12345', 'Volvo', 'XC90', 'Gul', 'Stasjonsvogn', true),('CD67890', 'BMW', 'Z3', 'Rosa', 'Liten bil', true);
+
+INSERT INTO DAT109BilUtleie.Kunde VALUES
+        ('Jan', 'Banan', 'Frutkveien 1', 67867833), ('Peder', 'Vik', 'Haugen 9', 34903490);
